@@ -1,0 +1,281 @@
+<definitions typeLanguage="http://www.w3.org/2001/XMLSchema" expressionLanguage="http://www.w3.org/1999/XPath" targetNamespace="http://www.activiti.org/test" xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:activiti="http://activiti.org/bpmn" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:flowable="http://flowable.org/bpmn">
+    <process id="process_0" name="myBPMNProcess" isExecutable="true">
+        <serviceTask id="st_6" name="provide_social_activity" flowable:class="aal4e.handler.provide_social_activity_type8">
+            <extensionElements>
+                <flowable:executionListener event="start" class="aal4e.listener.TaskStartedExecutionListenerImpl"></flowable:executionListener><flowable:executionListener event="end" class="aal4e.listener.TaskEndendExecutionListenerImpl"></flowable:executionListener>
+            </extensionElements>
+        </serviceTask><boundaryEvent id="boundaryTimer_st_6" name="boundaryTimer_provide_social_activity" attachedToRef="st_6">
+        <timerEventDefinition>
+            <timeDuration>
+                PT5S
+            </timeDuration>
+        </timerEventDefinition>
+    </boundaryEvent><boundaryEvent id="boundaryError_st_6" name="boundaryError_provide_social_activity" attachedToRef="st_6">
+        <errorEventDefinition errorRef="REQUIRE_ORCHESTRATION"></errorEventDefinition>
+    </boundaryEvent><serviceTask id="st_7" name="log_activity" flowable:class="aal4e.handler.log_activity_type10">
+        <extensionElements>
+            <flowable:executionListener event="start" class="aal4e.listener.TaskStartedExecutionListenerImpl"></flowable:executionListener><flowable:executionListener event="end" class="aal4e.listener.TaskEndendExecutionListenerImpl"></flowable:executionListener>
+        </extensionElements>
+    </serviceTask><boundaryEvent id="boundaryTimer_st_7" name="boundaryTimer_log_activity" attachedToRef="st_7">
+        <timerEventDefinition>
+            <timeDuration>
+                PT5S
+            </timeDuration>
+        </timerEventDefinition>
+    </boundaryEvent><boundaryEvent id="boundaryError_st_7" name="boundaryError_log_activity" attachedToRef="st_7">
+        <errorEventDefinition errorRef="REQUIRE_ORCHESTRATION"></errorEventDefinition>
+    </boundaryEvent><serviceTask id="st_4" name="provide_cognitive_exercise" flowable:class="aal4e.handler.provide_cognitive_exercise_type10">
+        <extensionElements>
+            <flowable:executionListener event="start" class="aal4e.listener.TaskStartedExecutionListenerImpl"></flowable:executionListener><flowable:executionListener event="end" class="aal4e.listener.TaskEndendExecutionListenerImpl"></flowable:executionListener>
+        </extensionElements>
+    </serviceTask><boundaryEvent id="boundaryTimer_st_4" name="boundaryTimer_provide_cognitive_exercise" attachedToRef="st_4">
+        <timerEventDefinition>
+            <timeDuration>
+                PT5S
+            </timeDuration>
+        </timerEventDefinition>
+    </boundaryEvent><boundaryEvent id="boundaryError_st_4" name="boundaryError_provide_cognitive_exercise" attachedToRef="st_4">
+        <errorEventDefinition errorRef="REQUIRE_ORCHESTRATION"></errorEventDefinition>
+    </boundaryEvent><serviceTask id="st_1" name="find_user" flowable:class="aal4e.handler.find_user_type5">
+        <extensionElements>
+            <flowable:executionListener event="start" class="aal4e.listener.TaskStartedExecutionListenerImpl"></flowable:executionListener><flowable:executionListener event="end" class="aal4e.listener.TaskEndendExecutionListenerImpl"></flowable:executionListener>
+        </extensionElements>
+    </serviceTask><boundaryEvent id="boundaryTimer_st_1" name="boundaryTimer_find_user" attachedToRef="st_1">
+        <timerEventDefinition>
+            <timeDuration>
+                PT5S
+            </timeDuration>
+        </timerEventDefinition>
+    </boundaryEvent><boundaryEvent id="boundaryError_st_1" name="boundaryError_find_user" attachedToRef="st_1">
+        <errorEventDefinition errorRef="REQUIRE_ORCHESTRATION"></errorEventDefinition>
+    </boundaryEvent><serviceTask id="st_8" name="log_activity" flowable:class="aal4e.handler.log_activity_type9">
+        <extensionElements>
+            <flowable:executionListener event="start" class="aal4e.listener.TaskStartedExecutionListenerImpl"></flowable:executionListener><flowable:executionListener event="end" class="aal4e.listener.TaskEndendExecutionListenerImpl"></flowable:executionListener>
+        </extensionElements>
+    </serviceTask><boundaryEvent id="boundaryTimer_st_8" name="boundaryTimer_log_activity" attachedToRef="st_8">
+        <timerEventDefinition>
+            <timeDuration>
+                PT5S
+            </timeDuration>
+        </timerEventDefinition>
+    </boundaryEvent><boundaryEvent id="boundaryError_st_8" name="boundaryError_log_activity" attachedToRef="st_8">
+        <errorEventDefinition errorRef="REQUIRE_ORCHESTRATION"></errorEventDefinition>
+    </boundaryEvent><serviceTask id="st_9" name="select_content" flowable:class="aal4e.handler.select_content_type7">
+        <extensionElements>
+            <flowable:executionListener event="start" class="aal4e.listener.TaskStartedExecutionListenerImpl"></flowable:executionListener><flowable:executionListener event="end" class="aal4e.listener.TaskEndendExecutionListenerImpl"></flowable:executionListener>
+        </extensionElements>
+    </serviceTask><boundaryEvent id="boundaryTimer_st_9" name="boundaryTimer_select_content" attachedToRef="st_9">
+        <timerEventDefinition>
+            <timeDuration>
+                PT5S
+            </timeDuration>
+        </timerEventDefinition>
+    </boundaryEvent><boundaryEvent id="boundaryError_st_9" name="boundaryError_select_content" attachedToRef="st_9">
+        <errorEventDefinition errorRef="REQUIRE_ORCHESTRATION"></errorEventDefinition>
+    </boundaryEvent><serviceTask id="st_10" name="provide_entertainment" flowable:class="aal4e.handler.provide_entertainment_type6">
+        <extensionElements>
+            <flowable:executionListener event="start" class="aal4e.listener.TaskStartedExecutionListenerImpl"></flowable:executionListener><flowable:executionListener event="end" class="aal4e.listener.TaskEndendExecutionListenerImpl"></flowable:executionListener>
+        </extensionElements>
+    </serviceTask><boundaryEvent id="boundaryTimer_st_10" name="boundaryTimer_provide_entertainment" attachedToRef="st_10">
+        <timerEventDefinition>
+            <timeDuration>
+                PT5S
+            </timeDuration>
+        </timerEventDefinition>
+    </boundaryEvent><boundaryEvent id="boundaryError_st_10" name="boundaryError_provide_entertainment" attachedToRef="st_10">
+        <errorEventDefinition errorRef="REQUIRE_ORCHESTRATION"></errorEventDefinition>
+    </boundaryEvent><serviceTask id="st_5" name="log_activity" flowable:class="aal4e.handler.log_activity_type8">
+        <extensionElements>
+            <flowable:executionListener event="start" class="aal4e.listener.TaskStartedExecutionListenerImpl"></flowable:executionListener><flowable:executionListener event="end" class="aal4e.listener.TaskEndendExecutionListenerImpl"></flowable:executionListener>
+        </extensionElements>
+    </serviceTask><boundaryEvent id="boundaryTimer_st_5" name="boundaryTimer_log_activity" attachedToRef="st_5">
+        <timerEventDefinition>
+            <timeDuration>
+                PT5S
+            </timeDuration>
+        </timerEventDefinition>
+    </boundaryEvent><boundaryEvent id="boundaryError_st_5" name="boundaryError_log_activity" attachedToRef="st_5">
+        <errorEventDefinition errorRef="REQUIRE_ORCHESTRATION"></errorEventDefinition>
+    </boundaryEvent><serviceTask id="st_3" name="propose_engage" flowable:class="aal4e.handler.propose_engage_type6">
+        <extensionElements>
+            <flowable:executionListener event="start" class="aal4e.listener.TaskStartedExecutionListenerImpl"></flowable:executionListener><flowable:executionListener event="end" class="aal4e.listener.TaskEndendExecutionListenerImpl"></flowable:executionListener>
+        </extensionElements>
+    </serviceTask><boundaryEvent id="boundaryTimer_st_3" name="boundaryTimer_propose_engage" attachedToRef="st_3">
+        <timerEventDefinition>
+            <timeDuration>
+                PT5S
+            </timeDuration>
+        </timerEventDefinition>
+    </boundaryEvent><boundaryEvent id="boundaryError_st_3" name="boundaryError_propose_engage" attachedToRef="st_3">
+        <errorEventDefinition errorRef="REQUIRE_ORCHESTRATION"></errorEventDefinition>
+    </boundaryEvent><serviceTask id="st_2" name="log_activity" flowable:class="aal4e.handler.log_activity_type1">
+        <extensionElements>
+            <flowable:executionListener event="start" class="aal4e.listener.TaskStartedExecutionListenerImpl"></flowable:executionListener><flowable:executionListener event="end" class="aal4e.listener.TaskEndendExecutionListenerImpl"></flowable:executionListener>
+        </extensionElements>
+    </serviceTask><boundaryEvent id="boundaryTimer_st_2" name="boundaryTimer_log_activity" attachedToRef="st_2">
+        <timerEventDefinition>
+            <timeDuration>
+                PT5S
+            </timeDuration>
+        </timerEventDefinition>
+    </boundaryEvent><boundaryEvent id="boundaryError_st_2" name="boundaryError_log_activity" attachedToRef="st_2">
+        <errorEventDefinition errorRef="REQUIRE_ORCHESTRATION"></errorEventDefinition>
+    </boundaryEvent><serviceTask id="st_11" name="log_activity" flowable:class="aal4e.handler.log_activity_type7">
+        <extensionElements>
+            <flowable:executionListener event="start" class="aal4e.listener.TaskStartedExecutionListenerImpl"></flowable:executionListener><flowable:executionListener event="end" class="aal4e.listener.TaskEndendExecutionListenerImpl"></flowable:executionListener>
+        </extensionElements>
+    </serviceTask><boundaryEvent id="boundaryTimer_st_11" name="boundaryTimer_log_activity" attachedToRef="st_11">
+        <timerEventDefinition>
+            <timeDuration>
+                PT5S
+            </timeDuration>
+        </timerEventDefinition>
+    </boundaryEvent><boundaryEvent id="boundaryError_st_11" name="boundaryError_log_activity" attachedToRef="st_11">
+        <errorEventDefinition errorRef="REQUIRE_ORCHESTRATION"></errorEventDefinition>
+    </boundaryEvent><parallelGateway id="split_2"></parallelGateway><parallelGateway id="split_1"></parallelGateway><startEvent id="startEv_0" name="start_0"></startEvent><endEvent id="endEv_1" name="endEvent_1"></endEvent><endEvent id="endEv_5" name="endEvent_5"></endEvent><endEvent id="endEv_3" name="endEvent_3"></endEvent><endEvent id="endEv_4" name="endEvent_4"></endEvent><endEvent id="endEv_2" name="endEvent_2"></endEvent><serviceTask id="adaptationTask" name="adaptationTask" flowable:class="com.com.flowable.myAdaptationClass">
+        <extensionElements>
+
+        </extensionElements>
+    </serviceTask><endEvent id="failureEndEvent" name="failureEndEvent"></endEvent><sequenceFlow id="flow_boundaryTimer_boundaryTimer_st_6" sourceRef="boundaryTimer_st_6" targetRef="adaptationTask">
+
+    </sequenceFlow><sequenceFlow id="flow_boundaryTimer_boundaryError_st_6" sourceRef="boundaryError_st_6" targetRef="adaptationTask">
+
+    </sequenceFlow><sequenceFlow id="flow_boundaryTimer_boundaryTimer_st_7" sourceRef="boundaryTimer_st_7" targetRef="adaptationTask">
+
+    </sequenceFlow><sequenceFlow id="flow_boundaryTimer_boundaryError_st_7" sourceRef="boundaryError_st_7" targetRef="adaptationTask">
+
+    </sequenceFlow><sequenceFlow id="flow_boundaryTimer_boundaryTimer_st_4" sourceRef="boundaryTimer_st_4" targetRef="adaptationTask">
+
+    </sequenceFlow><sequenceFlow id="flow_boundaryTimer_boundaryError_st_4" sourceRef="boundaryError_st_4" targetRef="adaptationTask">
+
+    </sequenceFlow><sequenceFlow id="flow_boundaryTimer_boundaryTimer_st_1" sourceRef="boundaryTimer_st_1" targetRef="adaptationTask">
+
+    </sequenceFlow><sequenceFlow id="flow_boundaryTimer_boundaryError_st_1" sourceRef="boundaryError_st_1" targetRef="adaptationTask">
+
+    </sequenceFlow><sequenceFlow id="flow_boundaryTimer_boundaryTimer_st_8" sourceRef="boundaryTimer_st_8" targetRef="adaptationTask">
+
+    </sequenceFlow><sequenceFlow id="flow_boundaryTimer_boundaryError_st_8" sourceRef="boundaryError_st_8" targetRef="adaptationTask">
+
+    </sequenceFlow><sequenceFlow id="flow_boundaryTimer_boundaryTimer_st_9" sourceRef="boundaryTimer_st_9" targetRef="adaptationTask">
+
+    </sequenceFlow><sequenceFlow id="flow_boundaryTimer_boundaryError_st_9" sourceRef="boundaryError_st_9" targetRef="adaptationTask">
+
+    </sequenceFlow><sequenceFlow id="flow_boundaryTimer_boundaryTimer_st_10" sourceRef="boundaryTimer_st_10" targetRef="adaptationTask">
+
+    </sequenceFlow><sequenceFlow id="flow_boundaryTimer_boundaryError_st_10" sourceRef="boundaryError_st_10" targetRef="adaptationTask">
+
+    </sequenceFlow><sequenceFlow id="flow_boundaryTimer_boundaryTimer_st_5" sourceRef="boundaryTimer_st_5" targetRef="adaptationTask">
+
+    </sequenceFlow><sequenceFlow id="flow_boundaryTimer_boundaryError_st_5" sourceRef="boundaryError_st_5" targetRef="adaptationTask">
+
+    </sequenceFlow><sequenceFlow id="flow_boundaryTimer_boundaryTimer_st_3" sourceRef="boundaryTimer_st_3" targetRef="adaptationTask">
+
+    </sequenceFlow><sequenceFlow id="flow_boundaryTimer_boundaryError_st_3" sourceRef="boundaryError_st_3" targetRef="adaptationTask">
+
+    </sequenceFlow><sequenceFlow id="flow_boundaryTimer_boundaryTimer_st_2" sourceRef="boundaryTimer_st_2" targetRef="adaptationTask">
+
+    </sequenceFlow><sequenceFlow id="flow_boundaryTimer_boundaryError_st_2" sourceRef="boundaryError_st_2" targetRef="adaptationTask">
+
+    </sequenceFlow><sequenceFlow id="flow_boundaryTimer_boundaryTimer_st_11" sourceRef="boundaryTimer_st_11" targetRef="adaptationTask">
+
+    </sequenceFlow><sequenceFlow id="flow_boundaryTimer_boundaryError_st_11" sourceRef="boundaryError_st_11" targetRef="adaptationTask">
+
+    </sequenceFlow><sequenceFlow id="flow_boundaryError_boundaryError_st_6" sourceRef="boundaryError_st_6" targetRef="adaptationTask">
+
+    </sequenceFlow><sequenceFlow id="flow_boundaryError_boundaryError_st_7" sourceRef="boundaryError_st_7" targetRef="adaptationTask">
+
+    </sequenceFlow><sequenceFlow id="flow_boundaryError_boundaryError_st_4" sourceRef="boundaryError_st_4" targetRef="adaptationTask">
+
+    </sequenceFlow><sequenceFlow id="flow_boundaryError_boundaryError_st_1" sourceRef="boundaryError_st_1" targetRef="adaptationTask">
+
+    </sequenceFlow><sequenceFlow id="flow_boundaryError_boundaryError_st_8" sourceRef="boundaryError_st_8" targetRef="adaptationTask">
+
+    </sequenceFlow><sequenceFlow id="flow_boundaryError_boundaryError_st_9" sourceRef="boundaryError_st_9" targetRef="adaptationTask">
+
+    </sequenceFlow><sequenceFlow id="flow_boundaryError_boundaryError_st_10" sourceRef="boundaryError_st_10" targetRef="adaptationTask">
+
+    </sequenceFlow><sequenceFlow id="flow_boundaryError_boundaryError_st_5" sourceRef="boundaryError_st_5" targetRef="adaptationTask">
+
+    </sequenceFlow><sequenceFlow id="flow_boundaryError_boundaryError_st_3" sourceRef="boundaryError_st_3" targetRef="adaptationTask">
+
+    </sequenceFlow><sequenceFlow id="flow_boundaryError_boundaryError_st_2" sourceRef="boundaryError_st_2" targetRef="adaptationTask">
+
+    </sequenceFlow><sequenceFlow id="flow_boundaryError_boundaryError_st_11" sourceRef="boundaryError_st_11" targetRef="adaptationTask">
+
+    </sequenceFlow><sequenceFlow id="SequenceFlow_17" sourceRef="st_1" targetRef="split_1">
+        <conditionExpression xsi:type="tFormalExpression">
+            <![CDATA[${myVariable}]]>
+        </conditionExpression>
+    </sequenceFlow><sequenceFlow id="SequenceFlow_16" sourceRef="st_2" targetRef="endEv_1">
+        <conditionExpression xsi:type="tFormalExpression">
+            <![CDATA[${myVariable}]]>
+        </conditionExpression>
+    </sequenceFlow><sequenceFlow id="SequenceFlow_15" sourceRef="split_1" targetRef="st_2">
+        <conditionExpression xsi:type="tFormalExpression">
+            <![CDATA[${myVariable}]]>
+        </conditionExpression>
+    </sequenceFlow><sequenceFlow id="SequenceFlow_14" sourceRef="st_3" targetRef="split_2">
+        <conditionExpression xsi:type="tFormalExpression">
+            <![CDATA[${myVariable}]]>
+        </conditionExpression>
+    </sequenceFlow><sequenceFlow id="SequenceFlow_13" sourceRef="st_5" targetRef="endEv_2">
+        <conditionExpression xsi:type="tFormalExpression">
+            <![CDATA[${myVariable}]]>
+        </conditionExpression>
+    </sequenceFlow><sequenceFlow id="SequenceFlow_12" sourceRef="st_4" targetRef="st_5">
+        <conditionExpression xsi:type="tFormalExpression">
+            <![CDATA[${myVariable}]]>
+        </conditionExpression>
+    </sequenceFlow><sequenceFlow id="SequenceFlow_11" sourceRef="split_2" targetRef="st_4">
+        <conditionExpression xsi:type="tFormalExpression">
+            <![CDATA[${myVariable}]]>
+        </conditionExpression>
+    </sequenceFlow><sequenceFlow id="SequenceFlow_10" sourceRef="st_7" targetRef="endEv_3">
+        <conditionExpression xsi:type="tFormalExpression">
+            <![CDATA[${myVariable}]]>
+        </conditionExpression>
+    </sequenceFlow><sequenceFlow id="SequenceFlow_9" sourceRef="st_6" targetRef="st_7">
+        <conditionExpression xsi:type="tFormalExpression">
+            <![CDATA[${myVariable}]]>
+        </conditionExpression>
+    </sequenceFlow><sequenceFlow id="SequenceFlow_8" sourceRef="split_2" targetRef="st_6">
+        <conditionExpression xsi:type="tFormalExpression">
+            <![CDATA[${myVariable}]]>
+        </conditionExpression>
+    </sequenceFlow><sequenceFlow id="SequenceFlow_7" sourceRef="st_8" targetRef="endEv_4">
+        <conditionExpression xsi:type="tFormalExpression">
+            <![CDATA[${myVariable}]]>
+        </conditionExpression>
+    </sequenceFlow><sequenceFlow id="SequenceFlow_6" sourceRef="split_2" targetRef="st_8">
+        <conditionExpression xsi:type="tFormalExpression">
+            <![CDATA[${myVariable}]]>
+        </conditionExpression>
+    </sequenceFlow><sequenceFlow id="SequenceFlow_5" sourceRef="st_11" targetRef="endEv_5">
+        <conditionExpression xsi:type="tFormalExpression">
+            <![CDATA[${myVariable}]]>
+        </conditionExpression>
+    </sequenceFlow><sequenceFlow id="SequenceFlow_4" sourceRef="st_10" targetRef="st_11">
+        <conditionExpression xsi:type="tFormalExpression">
+            <![CDATA[${myVariable}]]>
+        </conditionExpression>
+    </sequenceFlow><sequenceFlow id="SequenceFlow_3" sourceRef="st_9" targetRef="st_10">
+        <conditionExpression xsi:type="tFormalExpression">
+            <![CDATA[${myVariable}]]>
+        </conditionExpression>
+    </sequenceFlow><sequenceFlow id="SequenceFlow_2" sourceRef="split_2" targetRef="st_9">
+        <conditionExpression xsi:type="tFormalExpression">
+            <![CDATA[${myVariable}]]>
+        </conditionExpression>
+    </sequenceFlow><sequenceFlow id="SequenceFlow_1" sourceRef="split_1" targetRef="st_3">
+        <conditionExpression xsi:type="tFormalExpression">
+            <![CDATA[${myVariable}]]>
+        </conditionExpression>
+    </sequenceFlow><sequenceFlow id="SequenceFlow_0" sourceRef="startEv_0" targetRef="st_1">
+        <conditionExpression xsi:type="tFormalExpression">
+            <![CDATA[${myVariable}]]>
+        </conditionExpression>
+    </sequenceFlow><sequenceFlow id="adaptationTaskFlowEnd" sourceRef="adaptationTask" targetRef="failureEndEvent">
+
+    </sequenceFlow>
+    </process>
+</definitions>
